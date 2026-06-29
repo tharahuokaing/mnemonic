@@ -30,12 +30,15 @@ function generateSeedPhrase() {
     renderSeedGrid(chosenWords);
 
     // បើកដំណើរការប៊ូតុង Copy និងកែប្រែស្ថានភាព
-    copyBtn.disabled = false;
-    statusMessage.innerHTML = "<span style='color: #2ea44f;'>✓ បង្កើតឃ្លាគ្រាប់ពូជជោគជ័យ! សូមរក្សាទុកវាដោយប្រុងប្រយ័ត្ន។</span>";
+    if (copyBtn) copyBtn.disabled = false;
+    if (statusMessage) {
+        statusMessage.innerHTML = "<span style='color: #2ea44f;'>✓ បង្កើតឃ្លាគ្រាប់ពូជជោគជ័យ! សូមរក្សាទុកវាដោយប្រុងប្រយ័ត្ន។</span>";
+    }
 }
 
 // មុខងារបង្ហាញពាក្យនៅលើអេក្រង់តាមទម្រង់លេខរៀង
 function renderSeedGrid(words) {
+    if (!seedGrid) return;
     seedGrid.innerHTML = ""; // លុបលទ្ធផលចាស់ចោល
     
     words.forEach((word, index) => {
@@ -51,6 +54,7 @@ function copySeedPhrase() {
     if (!generatedPhrase) return;
 
     navigator.clipboard.writeText(generatedPhrase).then(() => {
+        if (!copyBtn) return;
         const originalText = copyBtn.innerText;
         copyBtn.innerText = "បានចម្លងរួចរាល់! 📋";
         copyBtn.style.borderColor = "#2ea44f";
@@ -60,6 +64,6 @@ function copySeedPhrase() {
             copyBtn.style.borderColor = "#30363d";
         }, 2000);
     }).catch(err => {
-        statusMessage.innerText = "មិនអាចចម្លងបានទេ៖ " + err;
+        if (statusMessage) statusMessage.innerText = "មិនអាចចម្លងបានទេ៖ " + err;
     });
 }
