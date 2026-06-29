@@ -1,130 +1,143 @@
-/* រចនាទំព័រទូទៅបែប Dark Mode ទំនើប */
+/* Base Layout & Theme Setup */
 body {
+    font-family: 'Hanuman', sans-serif;
+    background-color: #0b0f19; /* ពណ៌ផ្ទៃខាងក្រោយបែបងងឹត បង្កើនសុវត្ថិភាព */
+    color: #f0f4f8;
     margin: 0;
-    padding: 0;
-    background-color: #0d1117;
-    font-family: 'Khmer OS Siemreap', 'Segoe UI', sans-serif;
-    color: #c9d1d9;
+    padding: 40px 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
-/* ប្រអប់កណ្តាលការពារសុវត្ថិភាព */
+/* Container Wrapper */
 .secure-container {
-    width: 90%;
+    background: #161b26;
     max-width: 650px;
-    background: #161b22;
-    padding: 40px;
-    border-radius: 16px;
+    width: 100%;
     border: 1px solid #30363d;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+}
+
+/* Header & Identity Branding */
+.header {
     text-align: center;
-}
-
-/* ផ្នែកក្បាល និង Logo eCash */
-.logo {
-    font-size: 28px;
-    font-weight: 800;
-    color: #007bff; /* ពណ៌ខៀវតំណាងឱ្យ eCash */
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
-}
-
-h1 {
-    font-size: 22px;
-    color: #f0f6fc;
-    margin: 5px 0;
-}
-
-.tagline {
-    font-size: 14px;
-    color: #8b949e;
     margin-bottom: 25px;
 }
 
-/* ប្រអប់ព្រមានពីសុវត្ថិភាព */
-.warning-box {
-    background-color: rgba(240, 140, 0, 0.1);
-    border-left: 4px solid #f08c00;
-    padding: 15px;
-    border-radius: 6px;
-    text-align: left;
-    margin-bottom: 30px;
-    font-size: 13.5px;
-    line-height: 1.6;
-    color: #f08c00;
+.header .logo {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #00e676; /* ពណ៌បៃតងតំណាងឱ្យ eCash */
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
-/* ក្រឡាចត្រង្គបង្ហាញពាក្យសម្ងាត់ ១២ ម៉ាត់ */
+.header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.header .tagline {
+    font-size: 14px;
+    color: #8b949e;
+    margin: 5px 0 0 0;
+}
+
+/* Security Warning Box */
+.warning-box {
+    background-color: rgba(255, 145, 0, 0.1);
+    border: 1px solid #ff9100;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.warning-box p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #ffe0b2;
+}
+
+/* 12-Word Seed Phrase Responsive Grid */
 .seed-phrase-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr); /* បែងចែកជា ៣ ជួរឈរស្មើគ្នា */
+    gap: 12px;
     margin-bottom: 30px;
 }
 
-@media (max-width: 480px) {
-    .seed-phrase-grid {
-        grid-template-columns: repeat(2, 1fr); /* សម្រាប់ទូរសព្ទដៃបង្ហាញ ២ ជួរ */
-    }
-}
-
+/* Word Box Styles */
 .word-box {
     background: #21262d;
     border: 1px solid #30363d;
-    padding: 12px;
     border-radius: 8px;
+    padding: 12px;
     font-size: 15px;
-    color: #f0f6fc;
+    font-weight: bold;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-family: 'Courier New', Courier, monospace; /* ប្រើ Font បែបកូដងាយស្រួលមើល */
+    transition: all 0.2s ease;
+}
+
+.word-box span {
+    color: #8b949e;
+    font-size: 13px;
+    margin-right: 8px;
+    width: 20px;
+    display: inline-block;
 }
 
 .word-box.empty {
     color: #484f58;
     justify-content: center;
+    font-weight: normal;
 }
 
-.word-number {
-    color: #8b949e;
-    margin-right: 10px;
-    font-size: 12px;
-    width: 15px;
-    border-right: 1px solid #30363d;
+.word-box.empty span {
+    color: #484f58;
 }
 
-/* រចនាប៊ូតុង */
+/* Action Control Buttons Layout */
 .action-buttons {
     display: flex;
-    justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
 }
 
-button {
-    font-family: 'Khmer OS Siemreap', sans-serif;
+.btn-primary, .btn-secondary {
+    flex: 1;
+    font-family: 'Hanuman', sans-serif;
     font-size: 15px;
     font-weight: bold;
-    padding: 12px 24px;
-    border: none;
+    padding: 14px;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.2s ease;
+    transition: background-color 0.2s, border-color 0.2s;
+    outline: none;
 }
 
 .btn-primary {
-    background-color: #007bff;
-    color: white;
+    background-color: #2ea44f;
+    color: #ffffff;
+    border: 1px solid #2ea44f;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    box-shadow: 0 0 12px rgba(0, 123, 255, 0.4);
+    background-color: #2c974b;
 }
 
 .btn-secondary {
@@ -135,16 +148,49 @@ button {
 
 .btn-secondary:hover:not(:disabled) {
     background-color: #30363d;
-    color: #f0f6fc;
+    color: #ffffff;
 }
 
-button:disabled {
-    opacity: 0.4;
+.btn-secondary:disabled {
+    background-color: #161b26;
+    color: #484f58;
+    border-color: #21262d;
     cursor: not-allowed;
 }
 
-/* អត្ថបទបង្ហាញស្ថានភាព */
+/* Bottom Status Notification Text */
 .status-text {
+    font-size: 14px;
+    color: #8b949e;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Footer Section Rules */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid #21262d;
+    width: 100%;
+    max-width: 650px;
+    padding-top: 20px;
+}
+
+footer p {
     font-size: 13px;
     color: #8b949e;
+    line-height: 1.8;
+    margin: 8px 0;
+}
+
+/* Responsive Adaptive Layer for Smaller Screen Devices (Mobile Phones) */
+@media (max-width: 500px) {
+    .seed-phrase-grid {
+        grid-template-columns: repeat(2, 1fr); /* ប្តូរមកសល់ ២ ជួរឈរវិញនៅលើទូរស័ព្ទ */
+    }
+    
+    .action-buttons {
+        flex-direction: column; /* ប៊ូតុងធ្លាក់ចុះមកក្រោមតម្រៀបលើគ្នា */
+        gap: 10px;
+    }
 }
