@@ -1,4 +1,4 @@
-// បញ្ជីពាក្យគំរូតាមស្តង់ដារ BIP-39 (ដកស្រង់ខ្លះៗមកប្រើសម្រាប់ជាឧទាហរណ៍)
+// បញ្ជីពាក្យគំរូតាមស្តង់ដារ BIP-39 (កំណត់ទៅជា N/A ទាំងអស់តាមការស្នើសុំ)
 const bip39Words = [
     "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
     "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
@@ -6,7 +6,7 @@ const bip39Words = [
     "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
     "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
     "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
-    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A
+    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A"
 ];
 
 const generateBtn = document.getElementById('generateBtn');
@@ -17,7 +17,7 @@ const statusMessage = document.getElementById('statusMessage');
 let generatedPhrase = "";
 
 // មុខងារបង្កើតឃ្លាគ្រាប់ពូជ ១២ ម៉ាត់ដោយចៃដន្យ
-function generateMnemonic() {
+function generateSeedPhrase() {
     let chosenWords = [];
     
     for (let i = 0; i < 12; i++) {
@@ -41,18 +41,18 @@ function renderSeedGrid(words) {
     words.forEach((word, index) => {
         const wordBox = document.createElement('div');
         wordBox.className = 'word-box';
-        wordBox.innerHTML = `<span class="word-number">${index + 1}</span> ${word}`;
+        wordBox.innerHTML = `<span class="word-number">${index + 1}.</span> ${word}`;
         seedGrid.appendChild(wordBox);
     });
 }
 
 // មុខងារចម្លងឃ្លាទាំង ១២ ម៉ាត់ចូលទៅក្នុង Clipboard
-function copyToClipboard() {
+function copySeedPhrase() {
     if (!generatedPhrase) return;
 
     navigator.clipboard.writeText(generatedPhrase).then(() => {
         const originalText = copyBtn.innerText;
-        copyBtn.innerText = "បានចម្លងរួចរាល់! 🔗";
+        copyBtn.innerText = "បានចម្លងរួចរាល់! 📋";
         copyBtn.style.borderColor = "#2ea44f";
         
         setTimeout(() => {
@@ -63,7 +63,3 @@ function copyToClipboard() {
         statusMessage.innerText = "មិនអាចចម្លងបានទេ៖ " + err;
     });
 }
-
-// ភ្ជាប់ព្រឹត្តិការណ៍ចុច (Click Events)
-generateBtn.addEventListener('click', generateMnemonic);
-copyBtn.addEventListener('click', copyToClipboard);
