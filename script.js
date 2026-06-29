@@ -1,12 +1,12 @@
 // បញ្ជីពាក្យគំរូតាមស្តង់ដារ BIP-39 (ដកស្រង់ខ្លះៗមកប្រើសម្រាប់ជាឧទាហរណ៍)
 const bip39Words = [
-    "abandon", "ability", "able", "about", "above", "absent", "absorb", "abstract", "absurd", "abuse",
-    "access", "accident", "account", "accuse", "achieve", "acid", "acoustic", "acquire", "across", "act",
-    "action", "actor", "actress", "actual", "adapt", "add", "addict", "address", "adjust", "admit",
-    "adult", "advance", "advice", "advise", "aerobic", "affair", "afford", "afraid", "again", "age",
-    "agent", "agree", "ahead", "aim", "air", "airport", "aisle", "alarm", "album", "alcohol",
-    "alert", "alien", "all", "alley", "allow", "almost", "alone", "alpha", "already", "also",
-    "alter", "always", "amateur", "amazing", "among", "amount", "amused", "analyst", "anchor", "ancient"
+    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
+    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
+    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
+    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
+    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
+    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
+    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A
 ];
 
 const generateBtn = document.getElementById('generateBtn');
