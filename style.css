@@ -1,0 +1,150 @@
+/* រចនាទំព័រទូទៅបែប Dark Mode ទំនើប */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117;
+    font-family: 'Khmer OS Siemreap', 'Segoe UI', sans-serif;
+    color: #c9d1d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ប្រអប់កណ្តាលការពារសុវត្ថិភាព */
+.secure-container {
+    width: 90%;
+    max-width: 650px;
+    background: #161b22;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #30363d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* ផ្នែកក្បាល និង Logo eCash */
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #007bff; /* ពណ៌ខៀវតំណាងឱ្យ eCash */
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+h1 {
+    font-size: 22px;
+    color: #f0f6fc;
+    margin: 5px 0;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #8b949e;
+    margin-bottom: 25px;
+}
+
+/* ប្រអប់ព្រមានពីសុវត្ថិភាព */
+.warning-box {
+    background-color: rgba(240, 140, 0, 0.1);
+    border-left: 4px solid #f08c00;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #f08c00;
+}
+
+/* ក្រឡាចត្រង្គបង្ហាញពាក្យសម្ងាត់ ១២ ម៉ាត់ */
+.seed-phrase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 480px) {
+    .seed-phrase-grid {
+        grid-template-columns: repeat(2, 1fr); /* សម្រាប់ទូរសព្ទដៃបង្ហាញ ២ ជួរ */
+    }
+}
+
+.word-box {
+    background: #21262d;
+    border: 1px solid #30363d;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #f0f6fc;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Courier New', Courier, monospace; /* ប្រើ Font បែបកូដងាយស្រួលមើល */
+}
+
+.word-box.empty {
+    color: #484f58;
+    justify-content: center;
+}
+
+.word-number {
+    color: #8b949e;
+    margin-right: 10px;
+    font-size: 12px;
+    width: 15px;
+    border-right: 1px solid #30363d;
+}
+
+/* រចនាប៊ូតុង */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.4);
+}
+
+.btn-secondary {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background-color: #30363d;
+    color: #f0f6fc;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* អត្ថបទបង្ហាញស្ថានភាព */
+.status-text {
+    font-size: 13px;
+    color: #8b949e;
+}
