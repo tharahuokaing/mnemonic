@@ -1,12 +1,7 @@
 // បញ្ជីពាក្យគំរូតាមស្តង់ដារ BIP-39 (កំណត់ទៅជា N/A ទាំងអស់តាមការស្នើសុំ)
 const bip39Words = [
-    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
-    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
-    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
-    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
-    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
-    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
-    "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A"
+    "undo", "weasel", "gospel", "excite", "swallow", "hire", "flat", "island", "velvet", "armor",
+    "select", "buyer"
 ];
 
 const generateBtn = document.getElementById('generateBtn');
