@@ -22,13 +22,13 @@
                 </a>
             </div>
         </div>
-        
 
         <div class="warning-box">
-            <p>⚠️ <strong>ការណែនាំអំពីសុវត្ថិភាព៖</strong> សូមកត់ត្រាឃ្លាទាំង ១២ នេះទុកក្នុងក្រដាស ហើយហាមចែករំលែកវាទៅកាន់អ្នកដទៃដាច់ខាត。 អ្នកណាក៏ដោយដែលមានឃ្លានេះ នឹងមានសិទ្ធិគ្រប់គ្រងកាបូបលុយ eCash របស់អ្នក។</p>
+            <p>⚠️ <strong>ការណែនាំអំពីសុវត្ថិភាព៖</strong> សូមកត់ត្រាឃ្លាទាំង ១២ នេះទុកក្នុងក្រដាស ហើយហាមចែករំលែកវាទៅកាន់អ្នកដទៃដាច់ខាត។ អ្នកណាក៏ដោយដែលមានឃ្លានេះ នឹងមានសិទ្ធិគ្រប់គ្រងកាបូបលុយ eCash របស់អ្នក។</p>
         </div>
 
         <div class="seed-phrase-grid" id="seedGrid">
+            <!-- Words will be populated by script.js if needed, or left here as template -->
             <div class="word-box"><span>1.</span> undo</div>
             <div class="word-box"><span>2.</span> weasel</div>
             <div class="word-box"><span>3.</span> gospel</div>
@@ -45,11 +45,13 @@
 
         <div class="action-buttons">
             <button id="generateBtn" class="btn-primary" onclick="generateSeedPhrase()">បង្កើត និងប្រគល់ជូន 🔑</button>
-            <button id="copyBtn" class="btn-secondary" disabled onclick="copySeedPhrase()">ចម្លងទុក (Copy) 📋</button>
+            <button id="copyBtn" class="btn-secondary" onclick="copySeedPhrase()">ចម្លងទុក (Copy) 📋</button>
         </div>
 
         <div id="statusMessage" class="status-text">សូមចុចប៊ូតុងខាងលើដើម្បីទទួលឃ្លាសម្ងាត់របស់អ្នក។</div>
-    </div> <footer>
+    </div>
+
+    <footer>
         <p>
             ដោយក្តីគោរព និងរាប់អានពី<br>
             ហួកាំង ថារ៉ា និង ខេន លីដា
@@ -58,7 +60,7 @@
             © ២០២៦ សិរីមង្គលអាពាហ៍ពិពាហ៍
         </p>
     </footer>
-    
+
     <script src="script.js"></script>
     <script src="script1.js"></script>
 </body>
