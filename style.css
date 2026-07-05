@@ -1,25 +1,121 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7f6;
+    font-family: "Khmer OS Battambang", "Noto Sans Khmer", serif;
+    background: #f8f1e4;
+    background-image: linear-gradient(to bottom, #fdf8ef, #f0e3c2);
     padding: 20px;
-    line-height: 1.6;
+    line-height: 1.8;
+    color: #4b2e17;
 }
+
 .secure-container {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: #fffaf0;
+    padding: 35px;
+    border: 4px solid #b8860b;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(80, 40, 0, 0.25);
 }
-.header { text-align: center; margin-bottom: 20px; }
-.logo { font-weight: bold; font-size: 24px; color: #007bff; }
-.warning-box { background: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin: 20px 0; }
-.seed-phrase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 20px 0; }
-.word-box { background: #e9ecef; padding: 10px; border-radius: 5px; text-align: center; }
-.word-box span { font-weight: bold; color: #555; margin-right: 5px; }
-.action-buttons { display: flex; gap: 10px; justify-content: center; }
-.btn-primary { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
-.btn-secondary { background: #6c757d; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
-.status-text { text-align: center; margin-top: 15px; font-size: 0.9em; color: #666; }
-footer { text-align: center; margin-top: 40px; font-size: 0.8em; color: #777; }
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #c49b3d;
+    padding-bottom: 15px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #8b0000;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+}
+
+.warning-box {
+    background: #fff3cd;
+    border-left: 6px solid #b22222;
+    border-radius: 8px;
+    padding: 18px;
+    margin: 25px 0;
+    color: #5a3a00;
+}
+
+.seed-phrase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.word-box {
+    background: #f5e7c1;
+    border: 2px solid #b8860b;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    color: #5b3a1b;
+    font-weight: bold;
+}
+
+.word-box span {
+    color: #8b0000;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background: linear-gradient(#b8860b, #8b6508);
+    color: white;
+    border: 2px solid #6b4b00;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(#d4af37, #a67c00);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: linear-gradient(#8b0000, #5c0000);
+    color: white;
+    border: 2px solid #3d0000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(#b22222, #7a0000);
+    transform: scale(1.05);
+}
+
+.status-text {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 0.95em;
+    color: #6d4c1f;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 2px solid #c49b3d;
+    font-size: 0.85em;
+    color: #7a5a2c;
+}
