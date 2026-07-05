@@ -38,4 +38,4 @@ function renderSeedGrid(words) {
         wordBox.innerHTML = `<span>${index + 1}.</span> ${word}`;
         seedGrid.appendChild(wordBox);
     });
-}
+                   }
