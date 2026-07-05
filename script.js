@@ -1,41 +1,25 @@
-const specificPhrase = [
-    "undo", "weasel", "gospel", "excite", "swallow", "hire", 
-    "flat", "island", "velvet", "armor", "select", "buyer"
-];
+function copySeedPhrase() {
+    const wordElements = document.querySelectorAll('.word-box');
+    let seedPhrase = "";
 
-let clickCount = 0; // Tracks the number of clicks
+    wordElements.forEach((el, index) => {
+        // Remove the number part (e.g., '1. ') and get the word
+        const text = el.innerText.replace(/\d+\./, '').trim();
+        seedPhrase += text + (index < wordElements.length - 1 ? " " : "");
+    });
 
-function generateSeedPhrase() {
-    const seedGrid = document.getElementById('seedGrid');
-    const statusMessage = document.getElementById('statusMessage');
-    const copyBtn = document.getElementById('copyBtn');
-    
-    clickCount++; // Increment count on each click
-
-    if (clickCount === 1) {
-        // First click: Display the specific seed phrase
-        renderSeedGrid(specificPhrase);
-        if (statusMessage) statusMessage.innerHTML = "<span style='color: #2ea44f;'>✓ ឃ្លាគ្រាប់ពូជត្រូវបានផ្ទុកជោគជ័យ!</span>";
-        if (copyBtn) copyBtn.disabled = false;
-    } else {
-        // Second click and beyond: Display N/A
-        const naArray = Array(12).fill("N/A");
-        renderSeedGrid(naArray);
-        if (statusMessage) statusMessage.innerText = "បានកំណត់ទៅជា N/A (គ្មានទិន្នន័យ)";
-        if (copyBtn) copyBtn.disabled = true; // Disable copy after reset
-    }
+    navigator.clipboard.writeText(seedPhrase).then(() => {
+        const statusMessage = document.getElementById('statusMessage');
+        statusMessage.innerText = "បានចម្លងឃ្លាគ្រាប់ពូជទៅកាន់ Clipboard ដោយជោគជ័យ!";
+        statusMessage.style.color = "green";
+    }).catch(err => {
+        console.error('Error in copying: ', err);
+    });
 }
 
-function renderSeedGrid(words) {
-    const seedGrid = document.getElementById('seedGrid');
-    if (!seedGrid) return;
-    
-    seedGrid.innerHTML = ""; // Clear existing grid
-    
-    words.forEach((word, index) => {
-        const wordBox = document.createElement('div');
-        wordBox.className = 'word-box';
-        wordBox.innerHTML = `<span>${index + 1}.</span> ${word}`;
-        seedGrid.appendChild(wordBox);
-    });
+function generateSeedPhrase() {
+    // Placeholder function as per original request
+    const statusMessage = document.getElementById('statusMessage');
+    statusMessage.innerText = "ឃ្លាគ្រាប់ពូជត្រូវបានបង្កើតថ្មីរួចរាល់។";
+    statusMessage.style.color = "blue";
 }
