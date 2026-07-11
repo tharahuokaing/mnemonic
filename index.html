@@ -4,74 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ពិធីប្រគល់ជូនឃ្លាគ្រាប់ពូជ មុន្នីម៉ូនិច - eCash</title>
-    <link href="https://github.com/tharahuokaing/wedding/blob/main/footer.png?raw=true" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Invitation Wrapper -->
     <div class="invitation-container">
+
+        <!-- Centered Header Image -->
         <div class="khmer-sticker-header">
             <img src="footer.png" alt="Decorative Traditional Header Sign">
         </div>
         
-    <div class="secure-container">
-        <div class="header">
-            <div class="logo">eCash</div>
-            <h1>ពិធីប្រគល់ជូនឃ្លាគ្រាប់ពូជ មុន្នីម៉ូនិច</h1>
-            <p class="tagline">Mnemonic Seed Phrase — Cash for the Internet</p>
-        </div>
+        <!-- Secure Ceremony Container -->
+        <div class="secure-container">
+            <div class="header">
+                <div class="logo">eCash</div>
+                <h1>ពិធីប្រគល់ជូនឃ្លាគ្រាប់ពូជ មុន្នីម៉ូនិច</h1>
+                <p class="tagline">Mnemonic Seed Phrase — Cash for the Internet</p>
+            </div>
 
-        <div class="timeline-item highlight-banquet">
-            <div class="timeline-content">
-                <a href="https://www.cashtab.com/" target="_blank">
-                សូមចុចត្រង់នេះ ដើម្បីចូលទៅកាន់គេហទំព័រកាបូបនិម្មិត eCash
-                </a>
+            <!-- Link to Wallet -->
+            <div class="timeline-item highlight-banquet">
+                <div class="timeline-content">
+                    <a href="https://www.cashtab.com/" target="_blank">
+                        សូមចុចត្រង់នេះ ដើម្បីចូលទៅកាន់គេហទំព័រកាបូបនិម្មិត eCash
+                    </a>
+                </div>
+            </div>
+
+            <!-- Security Warning -->
+            <div class="warning-box">
+                <p>⚠️ <strong>ការណែនាំអំពីសុវត្ថិភាព៖</strong> 
+                សូមកត់ត្រាឃ្លាទាំង ១២ នេះទុកក្នុងក្រដាស ហើយហាមចែករំលែកវាទៅកាន់អ្នកដទៃដាច់ខាត។ 
+                អ្នកណាក៏ដោយដែលមានឃ្លានេះ នឹងមានសិទ្ធិគ្រប់គ្រងកាបូបលុយ eCash របស់អ្នក។</p>
+            </div>
+
+            <!-- Seed Phrase Grid -->
+            <div class="seed-phrase-grid" id="seedGrid">
+                <div class="word-box"><span>1.</span> undo</div>
+                <div class="word-box"><span>2.</span> weasel</div>
+                <div class="word-box"><span>3.</span> gospel</div>
+                <div class="word-box"><span>4.</span> excite</div>
+                <div class="word-box"><span>5.</span> swallow</div>
+                <div class="word-box"><span>6.</span> hire</div>
+                <div class="word-box"><span>7.</span> flat</div>
+                <div class="word-box"><span>8.</span> island</div>
+                <div class="word-box"><span>9.</span> velvet</div>
+                <div class="word-box"><span>10.</span> armor</div>
+                <div class="word-box"><span>11.</span> select</div>
+                <div class="word-box"><span>12.</span> buyer</div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="generateBtn" class="btn-primary" onclick="generateSeedPhrase()">បង្កើត និងប្រគល់ជូន 🔑</button>
+                <button id="copyBtn" class="btn-secondary" onclick="copySeedPhrase()">ចម្លងទុក (Copy) 📋</button>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-text">
+                សូមចុចប៊ូតុងខាងលើដើម្បីទទួលឃ្លាសម្ងាត់របស់អ្នក។
             </div>
         </div>
 
-        <div class="warning-box">
-            <p>⚠️ <strong>ការណែនាំអំពីសុវត្ថិភាព៖</strong> សូមកត់ត្រាឃ្លាទាំង ១២ នេះទុកក្នុងក្រដាស ហើយហាមចែករំលែកវាទៅកាន់អ្នកដទៃដាច់ខាត។ អ្នកណាក៏ដោយដែលមានឃ្លានេះ នឹងមានសិទ្ធិគ្រប់គ្រងកាបូបលុយ eCash របស់អ្នក។</p>
-        </div>
+        <!-- Footer Section -->
+        <footer>
+            <p>
+                ដោយក្តីគោរព និងរាប់អានពី<br>
+                ហួកាំង ថារ៉ា និង ខេន លីដា
+            </p>
+            <p>
+                © ២០២៦ សិរីមង្គលអាពាហ៍ពិពាហ៍
+            </p>
 
-        <div class="seed-phrase-grid" id="seedGrid">
-            <!-- Words will be populated by script.js if needed, or left here as template -->
-            <div class="word-box"><span>1.</span> undo</div>
-            <div class="word-box"><span>2.</span> weasel</div>
-            <div class="word-box"><span>3.</span> gospel</div>
-            <div class="word-box"><span>4.</span> excite</div>
-            <div class="word-box"><span>5.</span> swallow</div>
-            <div class="word-box"><span>6.</span> hire</div>
-            <div class="word-box"><span>7.</span> flat</div>
-            <div class="word-box"><span>8.</span> island</div>
-            <div class="word-box"><span>9.</span> velvet</div>
-            <div class="word-box"><span>10.</span> armor</div>
-            <div class="word-box"><span>11.</span> select</div>
-            <div class="word-box"><span>12.</span> buyer</div>
-        </div>
+            <!-- Centered Footer Image -->
+            <div class="khmer-sticker-footer">
+                <img src="https://github.com/tharahuokaing/wedding/blob/main/footer.png?raw=true" alt="Decorative Traditional Footer Sign">
+            </div>
+        </footer>
 
-        <div class="action-buttons">
-            <button id="generateBtn" class="btn-primary" onclick="generateSeedPhrase()">បង្កើត និងប្រគល់ជូន 🔑</button>
-            <button id="copyBtn" class="btn-secondary" onclick="copySeedPhrase()">ចម្លងទុក (Copy) 📋</button>
-        </div>
-
-        <div id="statusMessage" class="status-text">សូមចុចប៊ូតុងខាងលើដើម្បីទទួលឃ្លាសម្ងាត់របស់អ្នក។</div>
     </div>
 
-    <footer>
-        <p>
-            ដោយក្តីគោរព និងរាប់អានពី<br>
-            ហួកាំង ថារ៉ា និង ខេន លីដា
-        </p>
-        <p>
-            © ២០២៦ សិរីមង្គលអាពាហ៍ពិពាហ៍
-        </p>
-
-         <div class="khmer-sticker-footer">
-            <img src="https://github.com/tharahuokaing/wedding/blob/main/footer.png?raw=true" alt="Decorative Traditional Footer Sign">
-        </div>
-    </div>
-    </footer>
-
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script src="script1.js"></script>
 </body>
