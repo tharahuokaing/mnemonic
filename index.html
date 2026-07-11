@@ -11,37 +11,37 @@
     <!-- Invitation Wrapper -->
     <div class="invitation-container">
 
-        <!-- Centered Header Image -->
-        <div class="khmer-sticker-header">
+        <!-- Centered Header Decorative Image -->
+        <header class="khmer-sticker-header">
             <img src="footer.png" alt="Decorative Traditional Header Sign">
-        </div>
+        </header>
         
-        <!-- Secure Ceremony Container -->
-        <div class="secure-container">
+        <!-- Secure Ceremony Main Content -->
+        <main class="secure-container">
             <div class="header">
                 <div class="logo">eCash</div>
                 <h1>ពិធីប្រគល់ជូនឃ្លាគ្រាប់ពូជ មុន្នីម៉ូនិច</h1>
-                <p class="tagline">Mnemonic Seed Phrase — Cash for the Internet</p>
+                <p class="tagline" dir="ltr">Mnemonic Seed Phrase — Cash for the Internet</p>
             </div>
 
             <!-- Link to Wallet -->
-            <div class="timeline-item highlight-banquet">
+            <section class="timeline-item highlight-banquet">
                 <div class="timeline-content">
-                    <a href="https://www.cashtab.com/" target="_blank">
+                    <a href="https://www.cashtab.com/" target="_blank" rel="noopener noreferrer">
                         សូមចុចត្រង់នេះ ដើម្បីចូលទៅកាន់គេហទំព័រកាបូបនិម្មិត eCash
                     </a>
                 </div>
-            </div>
+            </section>
 
             <!-- Security Warning -->
-            <div class="warning-box">
+            <div class="warning-box" role="alert">
                 <p>⚠️ <strong>ការណែនាំអំពីសុវត្ថិភាព៖</strong> 
                 សូមកត់ត្រាឃ្លាទាំង ១២ នេះទុកក្នុងក្រដាស ហើយហាមចែករំលែកវាទៅកាន់អ្នកដទៃដាច់ខាត។ 
                 អ្នកណាក៏ដោយដែលមានឃ្លានេះ នឹងមានសិទ្ធិគ្រប់គ្រងកាបូបលុយ eCash របស់អ្នក។</p>
             </div>
 
             <!-- Seed Phrase Grid -->
-            <div class="seed-phrase-grid" id="seedGrid">
+            <div class="seed-phrase-grid" id="seedGrid" dir="ltr">
                 <div class="word-box"><span>1.</span> undo</div>
                 <div class="word-box"><span>2.</span> weasel</div>
                 <div class="word-box"><span>3.</span> gospel</div>
@@ -56,17 +56,17 @@
                 <div class="word-box"><span>12.</span> buyer</div>
             </div>
 
-            <!-- Action Buttons -->
+            <!-- Action Buttons (Event listeners should be bound in script.js) -->
             <div class="action-buttons">
-                <button id="generateBtn" class="btn-primary" onclick="generateSeedPhrase()">បង្កើត និងប្រគល់ជូន 🔑</button>
-                <button id="copyBtn" class="btn-secondary" onclick="copySeedPhrase()">ចម្លងទុក (Copy) 📋</button>
+                <button id="generateBtn" class="btn-primary">បង្កើត និងប្រគល់ជូន 🔑</button>
+                <button id="copyBtn" class="btn-secondary">ចម្លងទុក (Copy) 📋</button>
             </div>
 
             <!-- Status Message -->
             <div id="statusMessage" class="status-text">
                 សូមចុចប៊ូតុងខាងលើដើម្បីទទួលឃ្លាសម្ងាត់របស់អ្នក។
             </div>
-        </div>
+        </main>
 
         <!-- Footer Section -->
         <footer>
