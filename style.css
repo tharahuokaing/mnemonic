@@ -142,3 +142,19 @@ footer {
     height: auto;
     border-radius: 4px;
 }
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 2px solid #c49b3d;
+    font-size: 0.85em;
+    color: #7a5a2c;
+    
+    /* Centering updates */
+    text-align: center;         /* Centers text inline elements */
+    display: flex;
+    flex-direction: column;     /* Stacks children vertically */
+    align-items: center;        /* Centers block-level elements horizontally */
+    justify-content: center;
+}
