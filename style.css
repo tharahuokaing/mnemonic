@@ -1,121 +1,358 @@
+:root {
+    --ceremony-red: #800020;    /* Deep Burgundy */
+    --heritage-gold: #c5a059;   /* Metallic Gold accent */
+    --soft-cream: #fffdf9;      /* Card paper color */
+    --text-dark: #2c2520;       /* High readability text */
+    --accent-red-light: rgba(128, 0, 32, 0.05);
+}
+
 body {
-    font-family: "Khmer OS Battambang", "Noto Sans Khmer", serif;
-    background: #f8f1e4;
-    background-image: linear-gradient(to bottom, #fdf8ef, #f0e3c2);
-    padding: 20px;
-    line-height: 1.8;
-    color: #4b2e17;
-}
-
-.secure-container {
-    max-width: 650px;
-    margin: 0 auto;
-    background: #fffaf0;
-    padding: 35px;
-    border: 4px solid #b8860b;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(80, 40, 0, 0.25);
-}
-
-.header {
-    text-align: center;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #c49b3d;
-    padding-bottom: 15px;
-}
-
-.logo {
-    font-size: 30px;
-    font-weight: bold;
-    color: #8b0000;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-}
-
-.warning-box {
-    background: #fff3cd;
-    border-left: 6px solid #b22222;
-    border-radius: 8px;
-    padding: 18px;
-    margin: 25px 0;
-    color: #5a3a00;
-}
-
-.seed-phrase-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin: 25px 0;
-}
-
-.word-box {
-    background: #f5e7c1;
-    border: 2px solid #b8860b;
-    border-radius: 10px;
-    padding: 12px;
-    text-align: center;
-    color: #5b3a1b;
-    font-weight: bold;
-}
-
-.word-box span {
-    color: #8b0000;
-    font-weight: bold;
-    margin-right: 6px;
-}
-
-.action-buttons {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f1e3;
+    font-family: 'Hanuman', serif;
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: var(--text-dark);
 }
 
-.btn-primary {
-    background: linear-gradient(#b8860b, #8b6508);
-    color: white;
-    border: 2px solid #6b4b00;
-    padding: 12px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    background: linear-gradient(#d4af37, #a67c00);
-    transform: scale(1.05);
-}
-
-.btn-secondary {
-    background: linear-gradient(#8b0000, #5c0000);
-    color: white;
-    border: 2px solid #3d0000;
-    padding: 12px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-secondary:hover {
-    background: linear-gradient(#b22222, #7a0000);
-    transform: scale(1.05);
-}
-
-.status-text {
+.invitation-container {
+    background-color: var(--soft-cream);
+    max-width: 650px;
+    width: 100%;
+    padding: 40px 40px;
+    border: 3px solid var(--heritage-gold);
+    outline: 12px double var(--heritage-gold);
+    outline-offset: -20px;
+    box-shadow: 0 15px 50px rgba(139, 110, 61, 0.15);
     text-align: center;
-    margin-top: 18px;
-    font-size: 0.95em;
-    color: #6d4c1f;
-    font-style: italic;
+    position: relative;
+    box-sizing: border-box;
 }
 
-footer {
+/* Structural Image Wrappers */
+.khmer-sticker-header, .khmer-sticker-footer {
+    width: 100%;
+    display: block;
+}
+.khmer-sticker-header { margin-bottom: 25px; }
+.khmer-sticker-footer { margin-top: 35px; }
+
+.khmer-sticker-header img, .khmer-sticker-footer img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Typography elements */
+.title-moul {
+    font-family: 'Moul', serif;
+    color: var(--ceremony-red);
+    font-size: 1.4rem;
+    margin-bottom: 35px;
+    line-height: 1.8;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+}
+
+.parents-section-title {
+    font-family: 'Moul', serif;
+    font-size: 0.95rem;
+    color: var(--ceremony-red);
+    margin-bottom: 20px;
+}
+
+.parents-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 35px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.side-title {
+    font-family: 'Hanuman', serif;
+    font-weight: bold;
+    color: var(--heritage-gold);
+    border-bottom: 1px dashed var(--heritage-gold);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.parent-names {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.ceremony-text {
+    font-size: 1.05rem;
+    margin: 35px 0;
+    line-height: 1.9;
     text-align: center;
-    margin-top: 40px;
-    padding-top: 15px;
-    border-top: 2px solid #c49b3d;
-    font-size: 0.85em;
-    color: #7a5a2c;
+}
+
+.honorific-highlight {
+    font-weight: bold;
+    color: var(--ceremony-red);
+}
+
+/* Center Names Layout card */
+.couple-container {
+    margin: 40px 0;
+    padding: 20px;
+    background: var(--accent-red-light);
+    border-radius: 8px;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.couple-label {
+    font-size: 0.9rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.couple-name {
+    font-family: 'Moul', serif;
+    font-size: 1.35rem;
+    color: var(--ceremony-red);
+    display: block;
+    margin-top: 5px;
+}
+
+.and-connector {
+    font-family: 'Freehand', cursive;
+    font-size: 3rem;
+    color: var(--heritage-gold);
+    margin: 5px 0;
+    line-height: 1;
+}
+
+/* Schedule Card Layouts */
+.datetime-section {
+    margin: 35px 0;
+    padding: 15px 0;
+    border-top: 1px solid rgba(197, 160, 89, 0.3);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.datetime-title {
+    font-family: 'Moul', serif;
+    font-size: 1rem;
+    color: var(--ceremony-red);
+    margin-bottom: 10px;
+}
+
+.datetime-date {
+    margin: 5px 0; 
+    font-size: 1.1rem; 
+    font-weight: bold;
+}
+
+.lunar-date {
+    font-size: 0.95rem; 
+    color: #555; 
+    font-weight: normal;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Timeline Program Layout (Optimized for Full Height Display) */
+.program-wrapper {
+    margin: 25px 0;
+}
+
+.btn-program-toggle {
+    background-color: transparent;
+    border: 2px solid var(--heritage-gold);
+    color: var(--ceremony-red);
+    font-family: 'Hanuman', serif;
+    font-weight: bold;
+    padding: 14px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-program-toggle:hover {
+    background-color: var(--ceremony-red);
+    color: #ffffff;
+    border-color: var(--ceremony-red);
+}
+
+.timeline-container {
+    display: block; /* Forced block context to show fully on screen */
+    max-height: max-content; /* Dynamically sizes to fit all 4 days flawlessly */
+    opacity: 1;
+    margin-top: 25px;
+    background: #fffefb;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: 6px;
+    padding: 24px;
+    text-align: left;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+    box-sizing: border-box;
+}
+
+/* The display:none property acts instantly when clicked to pull the program out of view flow */
+.timeline-container.collapsed {
+    display: none !important;
+}
+
+.timeline-main-title {
+    font-family: 'Moul', serif;
+    font-size: 0.95rem;
+    color: var(--ceremony-red);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--heritage-gold);
+    padding-bottom: 8px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: baseline;
+    padding: 12px 0;
+    border-left: 2px solid var(--heritage-gold);
+    margin-left: 15px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    background: var(--soft-cream);
+    border: 2px solid var(--ceremony-red);
+    border-radius: 50%;
+}
+
+.time-badge {
+    font-weight: bold;
+    color: var(--ceremony-red);
+    min-width: 120px;
+    padding-left: 15px;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.timeline-content a {
+    color: var(--ceremony-red);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dashed var(--ceremony-red);
+}
+
+.timeline-content a:hover {
+    color: var(--heritage-gold);
+    border-bottom-color: var(--heritage-gold);
+}
+
+.highlight-banquet {
+    background: var(--accent-red-light);
+    border-radius: 4px;
+}
+
+/* Location and Button Components */
+.location-section {
+    background-color: rgba(128, 0, 32, 0.02);
+    border: 1px solid var(--heritage-gold);
+    padding: 25px 20px;
+    margin: 35px 0;
+    border-radius: 4px;
+}
+
+.location-title {
+    font-family: 'Moul', serif;
+    color: var(--ceremony-red);
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.location-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.location-sub {
+    font-size: 0.95rem; 
+    color: #555; 
+    display: block; 
+    margin-top: 5px;
+}
+
+.btn-link {
+    display: inline-block;
+    background-color: var(--ceremony-red);
+    color: white;
+    padding: 16px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    font-family: 'Hanuman', serif;
+    box-shadow: 0 4px 15px rgba(128, 0, 32, 0.2);
+}
+
+.btn-link:hover {
+    background-color: white;
+    color: var(--ceremony-red);
+    border: 2px solid var(--ceremony-red);
+    box-shadow: 0 4px 15px rgba(128, 0, 32, 0.1);
+}
+
+.blessing {
+    font-family: 'Moul', serif;
+    font-size: 0.9rem;
+    color: var(--heritage-gold);
+    margin-top: 35px;
+    line-height: 1.8;
+}
+
+@media (max-width: 480px) {
+    .parents-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .invitation-container {
+        padding: 30px 15px;
+    }
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+    }
+    .time-badge {
+        min-width: auto;
+        padding-left: 15px;
+        margin-bottom: 2px;
+    }
+    .timeline-content {
+        padding-left: 15px;
+    }
 }
