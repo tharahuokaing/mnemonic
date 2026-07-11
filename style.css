@@ -126,3 +126,19 @@ footer {
     font-size: 0.85em;
     color: #7a5a2c;
 }
+
+/* Center header and footer images */
+.khmer-sticker-header,
+.khmer-sticker-footer {
+    display: flex;
+    justify-content: center;   /* Centers horizontally */
+    align-items: center;       /* Centers vertically if height is set */
+    margin: 20px 0;            /* Balanced spacing */
+}
+
+.khmer-sticker-header img,
+.khmer-sticker-footer img {
+    max-width: 80%;            /* Keeps elegant size, not full stretch */
+    height: auto;
+    border-radius: 4px;
+}
