@@ -317,7 +317,7 @@ a:hover {
 }
 
 .led-running::after {
-    content: "█";
+    content: "ពិធីប្រគល់ជូនឃ្លាគ្រាប់ពូជ មុន្នីម៉ូនិច";
     display: inline-block;
     margin-left: 4px;
     color: var(--led-green);
