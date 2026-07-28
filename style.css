@@ -578,28 +578,6 @@ footer {
         grid-template-columns: repeat(4, 1fr); /* 4 clean columns on large screens */
     }
 }
-
-/* ==========================================================================
-   10. DARK MODE / OLED SUPPORT
-   ========================================================================== */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-primary-top: #12100e;
-        --bg-primary-bottom: #080706;
-        --text-primary: #f0e3c2;
-        --text-muted: #c49b3d;
-        --card-bg: #1a1612;
-        --border-gold: #8b6508;
-        --warning-bg: #2a2108;
-        --word-box-bg: #2b2214;
-        --shadow-color: rgba(0, 0, 0, 0.7);
-    }
-
-    .card {
-        background: rgba(35, 28, 20, 0.8);
-    }
-}
-
 /* ==========================================================================
    11. PRINT STYLESHEET
    ========================================================================== */
